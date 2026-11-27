@@ -24,12 +24,14 @@ Tudo fica em `src/data/`:
 Passo a passo em `.claude/skills/atualizar-cardapio/SKILL.md`.
 
 ## Publicar
+
+**Cloudflare (recomendado, grátis):** o repositório já tem `wrangler.jsonc`. No painel: Workers & Pages → Create → Import a repository → `lucasmartinsadvc`, Build command `npm run build`, Deploy command `npx wrangler deploy`. Depois do primeiro deploy, adicione a variável de build `SITE_URL` com o endereço final (para sitemap e links canônicos absolutos) e publique de novo.
+
 O build é estático (pasta `dist/`). Defina o domínio para canonical/sitemap/OG:
 ```bash
 SITE_URL=https://seu-dominio.com.br npm run build
 ```
 - **Vercel**: importar o repositório → framework “Vite” → variável `SITE_URL`. `vercel.json` já inclui o fallback de rotas.
-- **Netlify**: build `npm run build`, publish `dist`. `public/_redirects` já inclui o fallback.
 - **Hospedagem comum (cPanel/Hostinger)**: envie o conteúdo de `dist/`; as URLs de produto já existem como `cardapio/<slug>/index.html` e há `404.html` de fallback.
 
 Depois: cadastrar `https://seu-dominio/sitemap.xml` no Google Search Console e atualizar o link do site no Instagram.
