@@ -1,0 +1,43 @@
+import type { Category } from './types';
+
+/** Ordem = ordem do cardápio oficial no aiqfome. */
+export const categories: Category[] = [
+  { id: 'bebidas-cremosas', name: 'Bebidas Cremosas', tagline: 'Cremosidade no ponto certo.',
+    scene: { bg: ['#2a1710', '#0b0604'], accent: '#d9a46c', glow: '#8a4b25', particles: ['steam', 'cocoa', 'bean'], layout: 'orbit', glyph: 'cup', mood: 'Calor, cacau e veludo' } },
+  { id: 'sanduiches', name: 'Sanduíches', tagline: 'Brioche tostado, recheio generoso.',
+    scene: { bg: ['#3a2a12', '#120c05'], accent: '#e3b866', glow: '#a2681f', particles: ['crumb', 'herb', 'sparkle'], layout: 'split', glyph: 'sandwich', mood: 'Chapa quente e queijo derretido' } },
+  { id: 'croissants', name: 'Croissants', tagline: 'Camadas de manteiga, crocância dourada.',
+    scene: { bg: ['#3b230c', '#0d0804'], accent: '#f0c27a', glow: '#b06a1c', particles: ['flake', 'crumb', 'sparkle'], layout: 'tilt', glyph: 'croissant', mood: 'Massa folhada em câmera lenta' } },
+  { id: 'tapiocas', name: 'Tapiocas', tagline: 'O Ceará servido na chapa.',
+    scene: { bg: ['#e9dfc8', '#c9b48c'], accent: '#5b3a1e', glow: '#ffffff', particles: ['flake', 'sparkle'], layout: 'float', glyph: 'tapioca', mood: 'Goma branca, coalho dourado' } },
+  { id: 'crepiocas', name: 'Crepiocas', tagline: 'Leve por fora, recheada por dentro.',
+    scene: { bg: ['#dcd0b0', '#a99668'], accent: '#3f2a14', glow: '#fff6dc', particles: ['herb', 'flake'], layout: 'split', glyph: 'crepioca', mood: 'Dobras macias e recheio quente' } },
+  { id: 'omeletes', name: 'Omeletes', tagline: 'Ovos, ervas e frigideira quente.',
+    scene: { bg: ['#f2d27a', '#a2701c'], accent: '#3a2408', glow: '#fff3c4', particles: ['herb', 'sparkle'], layout: 'orbit', glyph: 'omelete', mood: 'Amarelo-sol, textura fofa' } },
+  { id: 'cuscuz', name: 'Cuscuz', tagline: 'Tradição nordestina, ponto da casa.',
+    scene: { bg: ['#e8b64a', '#7b4f10'], accent: '#2d1a05', glow: '#ffe3a1', particles: ['flake', 'steam', 'herb'], layout: 'stack', glyph: 'cuscuz', mood: 'Milho, vapor e manteiga' } },
+  { id: 'saladas', name: 'Saladas', tagline: 'Frescor que tem sotaque.',
+    scene: { bg: ['#1f3d22', '#08140a'], accent: '#c7e08a', glow: '#4f8b3a', particles: ['leaf', 'herb', 'drop'], layout: 'float', glyph: 'salad', mood: 'Folhas, cor e crocância' } },
+  { id: 'toasts', name: 'Toasts', tagline: 'Pão tostado como tela de autor.',
+    scene: { bg: ['#4a2a18', '#120905'], accent: '#e7a96a', glow: '#9a4f22', particles: ['herb', 'drop', 'crumb'], layout: 'tilt', glyph: 'toast', mood: 'Mel escorrendo, ervas frescas' } },
+  { id: 'salgados', name: 'Salgados', tagline: 'Douradinhos, crocantes, irresistíveis.',
+    scene: { bg: ['#5a3110', '#170b03'], accent: '#ffc46b', glow: '#c06a10', particles: ['crumb', 'sparkle', 'steam'], layout: 'orbit', glyph: 'savory', mood: 'Fritura dourada e recheio cremoso' } },
+  { id: 'bolos', name: 'Bolos', tagline: 'Fatias que lembram casa de vó.',
+    scene: { bg: ['#f3e3cf', '#c99c7a'], accent: '#4a2516', glow: '#fff7ee', particles: ['crumb', 'sparkle', 'berry'], layout: 'stack', glyph: 'cake', mood: 'Camadas, recheio e afeto' } },
+  { id: 'tortas-doces', name: 'Tortas Doces', tagline: 'Confeitaria de vitrine.',
+    scene: { bg: ['#3d0f1a', '#100306'], accent: '#f1b9c4', glow: '#8e2440', particles: ['berry', 'sparkle', 'cocoa'], layout: 'tilt', glyph: 'tart', mood: 'Brilho, ganache e frutas' } },
+  { id: 'doces', name: 'Doces', tagline: 'O final feliz de cada pedido.',
+    scene: { bg: ['#2b1408', '#0a0402'], accent: '#f5cf8e', glow: '#7c3d15', particles: ['cocoa', 'sparkle', 'berry'], layout: 'float', glyph: 'sweet', mood: 'Chocolate, brilho e pequenos prazeres' } },
+  { id: 'sucos', name: 'Sucos', tagline: 'Fruta espremida na hora.',
+    scene: { bg: ['#f7b733', '#c2410c'], accent: '#3b1a02', glow: '#fff1b8', particles: ['citrus', 'ice', 'drop'], layout: 'split', glyph: 'juice', mood: 'Gelo, polpa e sol do sertão' } },
+  { id: 'sucos-funcionais', name: 'Sucos Funcionais', tagline: 'Energia em forma de cor.',
+    scene: { bg: ['#2f5d34', '#0b1f0e'], accent: '#e8f5b8', glow: '#7fbf4d', particles: ['leaf', 'citrus', 'drop'], layout: 'float', glyph: 'tall-glass', mood: 'Verde vivo, gengibre e hortelã' } },
+  { id: 'gelados', name: 'Gelados', tagline: 'Refresco com assinatura.',
+    scene: { bg: ['#6b4a12', '#1d1203'], accent: '#ffe7a8', glow: '#d79c2a', particles: ['ice', 'citrus', 'drop'], layout: 'orbit', glyph: 'tall-glass', mood: 'Mate gelado, mel e limão' } },
+  { id: 'bebidas', name: 'Bebidas', tagline: 'Gelada, do jeito que você gosta.',
+    scene: { bg: ['#123a4a', '#03121a'], accent: '#bfe9ff', glow: '#2b8fb8', particles: ['bubble', 'ice', 'drop'], layout: 'float', glyph: 'can', mood: 'Gas, gelo e condensação' } },
+  { id: 'combos', name: 'Combos', tagline: 'Escolhas certas, juntas.',
+    scene: { bg: ['#0e3a2c', '#03110c'], accent: '#e0b77a', glow: '#1f7a55', particles: ['sparkle', 'crumb', 'cocoa'], layout: 'split', glyph: 'combo', mood: 'O melhor de dois mundos' } },
+];
+
+export const categoryById = Object.fromEntries(categories.map((c) => [c.id, c])) as Record<Category['id'], Category>;
