@@ -1,18 +1,10 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, type MotionValue, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
-import HeroCup from '../components/HeroCup';
-import { Bean } from '../components/Particles';
+import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, Plus } from '../components/Icons';
 import { productBySlug, brl } from '../lib/menu';
 import { images } from '../data/images';
 
-const beans = [
-  { x: '8%', y: '18%', s: 46, d: 0.9, r: -30 }, { x: '78%', y: '12%', s: 34, d: 0.5, r: 40 },
-  { x: '86%', y: '62%', s: 58, d: 1.2, r: 120 }, { x: '14%', y: '72%', s: 30, d: 0.35, r: 70 },
-  { x: '62%', y: '82%', s: 24, d: 0.25, r: -60 }, { x: '28%', y: '8%', s: 22, d: 0.2, r: 10 },
-  { x: '92%', y: '36%', s: 20, d: 0.15, r: 200 }, { x: '4%', y: '46%', s: 64, d: 1.4, r: 160 },
-];
 
 const mini = ['croissant-nutella-c-morango', 'coxinha-frango-com-requeijao-brigadeiro-gourmet'];
 
@@ -63,11 +55,8 @@ export default function Hero() {
       <motion.div className="hero-stage" style={{ y: reduce ? 0 : cupY, rotate: reduce ? 0 : cupRot }}>
         <motion.div className="hero-cup" style={{ rotateX: tiltX, rotateY: tiltY }}
           initial={{ opacity: 0, scale: 0.85, y: 60 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
-          <div className="hero-cup-float"><HeroCup /></div>
+          <div className="hero-cup-float"><img className="hero-cup-img" src={images['ia-hero'].src} alt={images['ia-hero'].alt} width="1250" height="1000" fetchPriority="high" decoding="async" /></div>
         </motion.div>
-        {beans.map((b, i) => (
-          <BeanFloat key={i} {...b} sx={sx} sy={sy} i={i} reduce={!!reduce} />
-        ))}
       </motion.div>
 
       <motion.aside className="hero-minis" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.1 }} aria-label="Destaques">
@@ -97,14 +86,3 @@ export default function Hero() {
   );
 }
 
-type BF = { x: string; y: string; s: number; d: number; r: number; i: number; reduce: boolean; sx: MotionValue<number>; sy: MotionValue<number> };
-function BeanFloat({ x, y, s, d, r, i, reduce, sx, sy }: BF) {
-  const tx = useTransform(sx, (v) => v * 80 * d);
-  const ty = useTransform(sy, (v) => v * 60 * d);
-  return (
-    <motion.div className="hero-bean" style={{ left: x, top: y, x: reduce ? 0 : tx, y: reduce ? 0 : ty, filter: d < 0.3 ? 'blur(3px)' : d > 1.1 ? 'blur(2px)' : undefined, zIndex: d > 1 ? 4 : 1 }}
-      initial={{ opacity: 0, scale: 0.4 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 + i * 0.08, duration: 0.9 }}>
-      <div className="bean-bob" style={{ ['--r' as string]: `${r}deg`, ['--dur' as string]: `${6 + i}s` }}><Bean size={s} /></div>
-    </motion.div>
-  );
-}

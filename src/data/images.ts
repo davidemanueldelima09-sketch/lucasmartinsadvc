@@ -10,6 +10,9 @@ const of = (file: string, alt: string): ImageAsset => ({ src: `${import.meta.env
 const il = (file: string, alt: string): ImageAsset => ({ src: `${import.meta.env.BASE_URL}img/ilustrativas/${file}`, alt, kind: 'ilustrativa', credit: 'Unsplash — imagem ilustrativa provisória' });
 
 export const images: Record<string, ImageAsset> = {
+  /** Arte de campanha do hero, gerada por IA (ElevenLabs). Não é foto do produto real. */
+  'ia-hero': { src: `${import.meta.env.BASE_URL}img/hero/copos-vinas.webp`, alt: 'Copos de café Viñas com café espirrando', kind: 'ilustrativa', credit: 'Imagem gerada por IA (ElevenLabs) — arte de campanha' },
+
   'of-logo': of('logo.webp', 'Logomarca Viñas Café'),
   'of-capa': of('capa.webp', 'Croissant com morangos e calda de chocolate do Viñas Café'),
   'of-croissant-nutella': of('croissant-nutella-morango.webp', 'Croissant Nutella com morango do Viñas Café'),
