@@ -31,7 +31,7 @@ public/img/oficial | public/img/ilustrativas
 - Paleta derivada da **logomarca oficial** (monograma "VC" em forma de xícara, dourado sobre verde): verde `#072F27`, verde profundo `#021712`, musgo `#56663A`, creme `#F4ECDC`, café `#3A2316`, dourado `#D6A86B`.
 - Tipografia: Fraunces (serifada editorial, itálico para acentos) + Manrope (texto/UI).
 - Assinatura: “Mais que um café, uma experiência.”
-- Hero: imagem fotorrealista dos copos Viñas (gerada por IA no ElevenLabs) com gotas de café animadas saindo do espirro (`CoffeeDrops`), flutuação suave, parallax por mouse/rolagem e entrada do título em máscara. O giro 360° foi removido a pedido do cliente.
+- Hero: imagem fotorrealista dos copos Viñas (gerada por IA no ElevenLabs) com as gotas da própria foto animadas (`HeroDrops`): 39 gotas recortadas da imagem em `public/img/hero/gotas.webp` (sprite), fundo reconstruído em `copos-vinas.webp`, posições/vetores em `src/data/heroDrops.ts`, flutuação suave, parallax por mouse/rolagem e entrada do título em máscara. O giro 360° foi removido a pedido do cliente.
 
 ## Apresentação individual dos produtos
 Cada produto tem URL própria (`/cardapio/<slug>`) e um “palco” cinematográfico. A composição combina:
