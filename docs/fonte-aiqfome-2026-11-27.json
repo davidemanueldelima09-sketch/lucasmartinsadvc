@@ -1,0 +1,1968 @@
+{
+ "fonte": "https://aiqfome.com/CE/sobral/vinas-cafe",
+ "extraido_em": "2026-11-27",
+ "menu": [
+  {
+   "cat": "bebidas cremosas",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830595,
+     "nome": "chocolate quente (180ml)",
+     "desc": "receita especial viñas café, feito com chocolate nobre, cacau 50%, toque de especiarias e cremoso no ponto certo.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       22.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830596,
+     "nome": "frapê de cappuccino (300ml)",
+     "desc": "base de cappuccino, sorvete de creme, leite gelado, calda de chocolate.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       29.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830597,
+     "nome": "frapê de chocolate (300ml)",
+     "desc": "café solúvel, cacau 50%, sorvete de creme, leite gelado, calda de chocolate.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       32.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830598,
+     "nome": "frapê c/ doce de leite e paçoca (300ml)",
+     "desc": "café solúvel, sorvete de creme, leite gelado, doce de leite la sereníssima, finalizado com paçoquita.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       32.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830599,
+     "nome": "frapê de brigadeiro c/ cookies (300ml)",
+     "desc": "café solúvel, cacau em pó 50%, sorvete de creme, leite gelado, calda de chocolate, biscoito cookies.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       22.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "sanduíches",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830601,
+     "nome": "misto clássico",
+     "desc": "pão de forma brioche, queijo muçarela, presunto de peru e requeijão",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830602,
+     "nome": "tostex 2 queijos",
+     "desc": "pão de forma brioche com muçarela e cream cheese tostados na manteiga",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       26.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830603,
+     "nome": "tostex sertanejo",
+     "desc": "pão de forma brioche, carne de sol desfiada temperada, creme de coalho e toque de mel.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       31.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830604,
+     "nome": "frango & fit",
+     "desc": "pão português, frango desfiado temperado, milho, cenoura ralada, alface americana e creme de ricota com ervas.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       31.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830605,
+     "nome": "croque monsieur",
+     "desc": "pão de forma brioche recheado com peito de peru e muçarela, finalizado com béchamel da casa e parmesão gratinado.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       33.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830606,
+     "nome": "croque madame",
+     "desc": "pão de forma brioche recheado com peito de peru e muçarela, finalizado com béchamel da casa, parmesão gratinado e ovo gema mole.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       34.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "croissants",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830607,
+     "nome": "croissant na chapa (amanteigado)",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       19.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830608,
+     "nome": "croissant peito de peru c/ cream cheese",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830609,
+     "nome": "croissant frango c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       25.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830610,
+     "nome": "croissant carne de sol c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       29.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830611,
+     "nome": "croissant caprese",
+     "desc": "molho pesto da casa, tomate cereja confitado e mozzarella de búfala.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       37.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830612,
+     "nome": "croissant camarão",
+     "desc": "creme de camarão com raspas de siciliano e cream cheese.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       44.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830613,
+     "nome": "croissant salmão defumado",
+     "desc": "salmão defumado em lâminas, creme azedo de siciliano, endro dill e cebola roxa caramelizada.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       46.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830614,
+     "nome": "croissant 3 queijos & mel",
+     "desc": "provolone, muçarela e cream cheese, mel cearense e praliné de castanha de caju",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       33.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830615,
+     "nome": "croissant doce de leite e canela",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       27.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830616,
+     "nome": "croissant nutella c/ morango",
+     "desc": "",
+     "img": "8a62e70cec17cfe148acd93f7d0a6f8b54d5ff7d.jpg",
+     "sizes": [
+      [
+       "Unid.",
+       30.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "tapiocas",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830617,
+     "nome": "amanteigada",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       10.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830618,
+     "nome": "tapioca de queijo coalho e ovo",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       15.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830619,
+     "nome": "tapioca rendada de queijo coalho",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830620,
+     "nome": "tapioca peito de peru c/ muçarela",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       15.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830621,
+     "nome": "tapioca carne de sol e requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830622,
+     "nome": "tapioca frango e requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       21.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "crepiocas",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830623,
+     "nome": " crepioca frango c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       26.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830624,
+     "nome": " crepioca carne de sol c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       27.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830625,
+     "nome": " crepioca 3 queijos (requeijão, coalho e muçarela)",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       25.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830626,
+     "nome": "crepioca peito de peru c/ muçarela",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830627,
+     "nome": " crepioca caprese",
+     "desc": "molho pesto da casa, tomate cereja confitado e mozzarella de búfala.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       30.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "omeletes",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830628,
+     "nome": " omelete misto",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830629,
+     "nome": "omelete frango c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       26.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830630,
+     "nome": " omelete carne de sol c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       27.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830631,
+     "nome": "omelete 3 queijos (requeijão, coalho e muçarela)",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       25.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830632,
+     "nome": "caprese",
+     "desc": " omelete molho pesto da casa, tomate cereja confitado e mozzarella de búfala.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       30.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "cuscuz",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830633,
+     "nome": "cuscuz amanteigado",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       11.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830634,
+     "nome": "cuscuz queijo coalho",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       15.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830635,
+     "nome": "cuscuz queijo e ovo",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       17.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830636,
+     "nome": " cuscuz frango",
+     "desc": "frango desfiado refogado.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       19.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830637,
+     "nome": "cuscuz carne de sol",
+     "desc": "carne de sol desfiada e refogada com coalho.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830638,
+     "nome": "cuscuz cuscuz gostosinho",
+     "desc": "carne moída ao molho, ovo frito e coentro.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "saladas",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830645,
+     "nome": "salada caesar",
+     "desc": "alface americana, frango desfiado, croutons, maionese da casa e lascas de parmesão.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       33.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830646,
+     "nome": "salada caprese",
+     "desc": "alface americana, molho pesto da casa, tomate cereja confitado, mozzarella de búfala e croutons.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       35.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830647,
+     "nome": "salada nordestina",
+     "desc": "alface americana, carne de sol desfiada, queijo coalho, praliné de castanha de cajú, picles de cebola roxa e molho mostarda e mel.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       36.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "toasts",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830648,
+     "nome": "toast mediterrâneo",
+     "desc": "creme de ricota temperada com ervas, tomate seco, azeitona preta, mel e parmesão gratinado",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       35.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830649,
+     "nome": "toast caprese",
+     "desc": "pesto de manjericão, tomate cereja confitado e mozzarella.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       37.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830650,
+     "nome": "toast lampião",
+     "desc": "creme de queijo coalho, carne de sol desfiada, picles de cebola roxa, mel e coentro.",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       38.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "salgados",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830652,
+     "nome": "empada de frango",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       18.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830653,
+     "nome": "empada de carne de sol",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       21.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830654,
+     "nome": "quiche de carne de sol c/ coalho",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830655,
+     "nome": "quiche de bacon c/ alho poró",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       15.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830656,
+     "nome": "quiche de camarão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       17.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830657,
+     "nome": "coxinha de frango c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830658,
+     "nome": "coxinha de camarão c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       20.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830659,
+     "nome": "coxinha de carne de sol c/ requeijão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       16.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830660,
+     "nome": "risole de carne",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830661,
+     "nome": "risole misto",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830662,
+     "nome": "mini pães de queijo (5und)",
+     "desc": "(sem glúten e sem lactose)",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       13.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830663,
+     "nome": "mini salgadinhos viñas buffet (12und)",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       22.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "bolos",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830664,
+     "nome": "laranja",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830665,
+     "nome": "bolo mole",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       11.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830666,
+     "nome": "luis felipe",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       11.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830667,
+     "nome": "amanteigado c/ geleia de morango",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830668,
+     "nome": "cenoura c/ chocolate",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       13.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830669,
+     "nome": "chocolate c/ brigadeiro",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       15.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830670,
+     "nome": "romeu e julieta",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       11.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830671,
+     "nome": "banana c/ canela",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       11.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830672,
+     "nome": "red velvet c/ geleia de morango",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "tortas doces",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830673,
+     "nome": "redvelvet",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       25.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830674,
+     "nome": "matilda",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       28.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830675,
+     "nome": "abacaxi c/ coco",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       25.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830676,
+     "nome": "chocolate c/ doce de leite e crocante",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       25.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830677,
+     "nome": "olho de sogra",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       22.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830678,
+     "nome": "ouro branco",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       28.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830679,
+     "nome": "tortinha de limão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       26.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 15830680,
+     "nome": "tortinha de ferrero rocher",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       28.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830681,
+     "nome": "tortinha kinder bueno",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       28.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16552338,
+     "nome": "torta banoffe",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       19.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16552341,
+     "nome": "tortaninho com geleia de frutas vermelhas",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       22.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "doces",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830682,
+     "nome": "brownie tradicional",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       11.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830683,
+     "nome": "bolo no pote",
+     "desc": "consultar sabores disponíveis",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       18.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830684,
+     "nome": "brigadeiro gourmet",
+     "desc": "zero glúten",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       5.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830685,
+     "nome": "mini pudim",
+     "desc": "zero glúten",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830686,
+     "nome": "copo da felicidade",
+     "desc": "consultar sabores disponíveis",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830687,
+     "nome": "biscoitos amanteigados (100g)",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       16.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16384403,
+     "nome": "tartelete de limão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       17.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16384402,
+     "nome": "tartelete de pistache",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       19.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16384401,
+     "nome": "tartelete ninho com geleia de morango",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       18.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16552337,
+     "nome": "cheesecake frutas vermelhas",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 16552336,
+     "nome": "cheesecake limão siciliano",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 0,
+     "disp": false
+    },
+    {
+     "id": 16680938,
+     "nome": "cheesecake de morango",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       23.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "sucos",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830695,
+     "nome": "limonada suíça",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       13.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830696,
+     "nome": "natural de limão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830697,
+     "nome": "natural de laranja",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830698,
+     "nome": "pink lemonade",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830699,
+     "nome": "cajá",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830700,
+     "nome": "maracujá",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830701,
+     "nome": "acerola",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Copo de 300ml",
+       12.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "sucos funcionais",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830702,
+     "nome": "hibisco c/ morango",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       14.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830703,
+     "nome": "laranja, cenoura, mel e hortelã",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       18.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830704,
+     "nome": "abacaxi, hortelã e limão",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       18.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830705,
+     "nome": "suco verde",
+     "desc": "abacaxi, couve manteiga, maça, limão e gengibre",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       18.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "gelado",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830707,
+     "nome": "mate c/ mel e limão (300ml)",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       19.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "bebidas",
+   "status": 1,
+   "items": [
+    {
+     "id": 15830708,
+     "nome": "água mineral s/ gás 500ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       3.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830709,
+     "nome": "água mineral c/ gás 500ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       4.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830710,
+     "nome": "coca-cola original lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       8.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830711,
+     "nome": "coca-cola zero lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       8.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830712,
+     "nome": "guaraná antarctica lata 350ml",
+     "desc": "",
+     "img": "b9b6e30a116a16096370f39cb0e9a24a98c850be.png",
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830713,
+     "nome": "guaraná antarctica zero lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830714,
+     "nome": "são geraldo 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830715,
+     "nome": "são geraldo 200ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       5.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830716,
+     "nome": "guaraná del rio 250ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       4.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830717,
+     "nome": "fanta uva lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830718,
+     "nome": "fanta laranja lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830719,
+     "nome": "sprite lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830720,
+     "nome": "schweppes citrus lata 350ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       7.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    },
+    {
+     "id": 15830721,
+     "nome": "aquarius fresh limão 510ml",
+     "desc": "",
+     "img": [],
+     "sizes": [
+      [
+       "Unid.",
+       8.9,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  },
+  {
+   "cat": "combo",
+   "status": 1,
+   "items": [
+    {
+     "id": 16778993,
+     "nome": "coxinha frango com requeijão + brigadeiro gourmet",
+     "desc": "ganhe 1 guaraná antártica",
+     "img": "45a3ad5b949a1a5ebb51529ef6867e452c079e5c.jpeg",
+     "sizes": [
+      [
+       "Combo",
+       19.8,
+       null
+      ]
+     ],
+     "status": 1,
+     "disp": true
+    }
+   ],
+   "grupos": [
+    []
+   ]
+  }
+ ]
+}
