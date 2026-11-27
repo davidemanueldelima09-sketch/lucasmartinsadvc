@@ -6,7 +6,7 @@
 - **Vite 6 + React 19 + TypeScript**, SPA com `react-router-dom` (rotas `/` e `/cardapio/:slug`).
 - **framer-motion** para animações (parallax, entradas, transições entre produtos). `MotionConfig reducedMotion="user"` + CSS `prefers-reduced-motion`.
 - CSS puro em `src/index.css` (tokens em `:root`, mobile-first, seções comentadas). Sem Tailwind (decisão: menos dependências, controle fino).
-- Fontes auto-hospedadas via `@fontsource` (DM Serif Display + Figtree).
+- Fontes auto-hospedadas via `@fontsource-variable` (Fraunces opsz + Manrope).
 - **Sem Three.js**: a xícara é SVG em camadas + CSS 3D/parallax. Mesmo impacto, ~0 KB extra e melhor desempenho no celular.
 - Build: `npm run build` = `tsc -b` → `vite build` → `scripts/prerender.mjs` (HTML estático por produto com title/description/OG/JSON-LD, `sitemap.xml`, `robots.txt`, `404.html`).
 
@@ -29,13 +29,15 @@ public/img/oficial | public/img/ilustrativas
 
 ## Identidade visual
 - Paleta derivada da **logomarca oficial** (monograma "VC" em forma de xícara, dourado sobre verde): verde `#072F27`, verde profundo `#021712`, musgo `#56663A`, creme `#F4ECDC`, café `#3A2316`, dourado `#D6A86B`.
-- Tipografia: DM Serif Display (títulos, sem itálico) + Figtree (texto/UI).
+- Tipografia: Fraunces (serifada editorial, itálico para acentos) + Manrope (texto/UI).
 - Assinatura: “Mais que um café, uma experiência.”
-- Hero: imagem fotorrealista dos copos Viñas (gerada por IA no ElevenLabs, arte de campanha) que gira 360° ao arrastar (mouse ou dedo) com inércia; faixa de informações práticas (horário, endereço, delivery).
-- **Direção de arte "sem cara de IA"** (decisão do cliente): nada de vidro fosco, brilhos/partículas, texto gigante vazado, números decorativos 01/02, palavra em itálico dourado nos títulos ou grades de estatísticas. Grade editorial, fios de 1px, botões retos (raio 4px), dourado só em preços e detalhes, seções alternando verde e papel creme, cardápio diagramado como menu impresso (nome, pontilhado, preço).
+- Hero: xícara em esmalte verde Viñas com borda e monograma dourados, latte art, vapor animado, grãos flutuantes com profundidade de campo e parallax por ponteiro/rolagem.
 
 ## Apresentação individual dos produtos
-Cada produto tem URL própria (`/cardapio/<slug>`) e uma página de apresentação. A composição vem da **categoria** (paleta e formato da moldura da foto: círculo, arco, inclinada, empilhada ou retangular), da **semente do ID** (posição da luz) e de vapor animado nas bebidas quentes, cuscuz e salgados. Sem foto: painel com a logomarca e “Foto em breve”.
+Cada produto tem URL própria (`/cardapio/<slug>`) e um “palco” cinematográfico. A composição combina:
+1. **Categoria** → paleta, layout (`orbit`, `split`, `tilt`, `stack`, `float`), ilustração e “mood”.
+2. **Palavras-chave do produto** → partículas extras (morango → frutas vermelhas, limão → rodelas cítricas, chocolate → cacau, mel/doce de leite → gotas, ervas → folhas, gelado → gelo…).
+3. **Semente do ID** → posição da luz, constelação de partículas, rotação do anel/tipografia de fundo.
 Navegação: setas/teclado (←/→), swipe no celular, Esc fecha, lista “Mais em <categoria>”. CTA WhatsApp (mensagem com loja, produto, preço, código) e aiqfome.
 
 ## Fontes de dados (pesquisa de 27/11/2026)

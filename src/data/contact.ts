@@ -16,7 +16,7 @@ export const business = {
   ifood: '' as string,
   address: {
     street: 'Av. Monsenhor José Aloísio Pinto, 300',
-    complement: 'Sobral Shopping, próximo à Le Biscuit',
+    complement: 'Sobral Shopping — loja próxima à Le Biscuit',
     district: 'Dom Expedito',
     city: 'Sobral',
     state: 'CE',
