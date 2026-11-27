@@ -138,6 +138,12 @@ body::after {
 .hero-stage { position: relative; z-index: 3; min-height: 360px; display: grid; place-items: center; perspective: 1200px; }
 .hero-cup { position: relative; width: min(92vw, 620px); transform-style: preserve-3d; }
 .hero-cup-float { animation: bob 7s ease-in-out infinite; }
+.hero-drag { cursor: grab; touch-action: pan-y; transform-style: preserve-3d; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.hero-drag:active { cursor: grabbing; }
+.hero-drag img { pointer-events: none; }
+.drag-hint { position: absolute; left: 50%; top: 2%; translate: -50% 0; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 99px; font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--cream); background: rgba(2,23,18,.55); border: 1px solid rgba(214,168,107,.35); backdrop-filter: blur(8px); pointer-events: none; white-space: nowrap; z-index: 7; }
+.drag-hint-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); animation: hintdot 1.6s ease-in-out infinite; }
+@keyframes hintdot { 0%, 100% { transform: translateX(-5px); } 50% { transform: translateX(5px); } }
 .hero-cup-svg { width: 100%; height: auto; }
 .hero-cup-img { width: 100%; height: auto; -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 48%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at 50% 48%, #000 58%, transparent 100%); }
 @keyframes bob { 50% { transform: translateY(-14px) rotate(-1.2deg); } }
@@ -155,10 +161,11 @@ body::after {
   100% { transform: translateY(-45%) scaleX(1.6) skewX(-6deg); opacity: 0; }
 }
 
-.hero-minis { display: none; }
-.mini-card { display: grid; gap: 6px; width: 140px; padding: 8px; border-radius: 18px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(12px); transition: transform .4s var(--ease), border-color .4s; }
+.hero-minis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 26px; max-width: 520px; }
+.mini-card { display: grid; grid-template-columns: 64px 1fr; align-items: center; gap: 10px; min-width: 0; padding: 8px; border-radius: 18px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(12px); transition: transform .4s var(--ease), border-color .4s; }
 .mini-card:hover { transform: translateY(-6px); border-color: var(--gold); }
-.mini-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 12px; }
+.mini-card img { width: 64px; height: 64px; object-fit: cover; border-radius: 12px; }
+.mini-text { display: grid; gap: 2px; min-width: 0; }
 .mini-name { font-size: 11px; font-weight: 700; line-height: 1.25; }
 .mini-price { font-size: 11px; color: var(--gold); }
 
@@ -178,7 +185,6 @@ body::after {
   .hero-copy { grid-column: 1; grid-row: 1; }
   .hero-stage { grid-column: 2; grid-row: 1 / 3; min-height: 80vh; margin-left: -10%; }
   .hero-cup { width: min(52vw, 760px); }
-  .hero-minis { display: flex; gap: 12px; position: absolute; right: var(--gutter); top: 120px; z-index: 6; }
   .hero-script { position: absolute; right: var(--gutter); bottom: 90px; margin: 0; }
   .hero-foot { grid-column: 1 / -1; grid-row: 2; }
 }
@@ -515,6 +521,7 @@ html.stage-open .wa-fab { display: none; }
   .hero-lede { text-align: center; margin-inline: auto; }
   .hero-ctas { justify-content: center; }
   .hero-ctas .btn { flex: 1 1 240px; justify-content: center; }
+  .hero-minis { margin-inline: auto; text-align: left; }
   .hero-script { text-align: center; margin-top: 34px; }
 }
 @media (min-width: 980px) { .stage-related-inline { display: none; } }

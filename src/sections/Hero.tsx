@@ -1,10 +1,9 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { AnimatePresence, motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, Plus } from '../components/Icons';
 import { productBySlug, brl } from '../lib/menu';
 import { images } from '../data/images';
-
 
 const mini = ['croissant-nutella-c-morango', 'coxinha-frango-com-requeijao-brigadeiro-gourmet'];
 
@@ -19,6 +18,15 @@ export default function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const ghostX = useTransform(scrollYProgress, [0, 1], ['0%', '-18%']);
   const tiltX = useTransform(sy, (v) => v * -6), tiltY = useTransform(sx, (v) => v * 8);
+
+  // arrastar os copos (mouse e toque): gira em 3D e volta com mola ao soltar
+  const dx = useMotionValue(0), dy = useMotionValue(0);
+  const dragRotY = useTransform(dx, [-220, 220], [-28, 28]);
+  const dragRotX = useTransform(dy, [-220, 220], [20, -20]);
+  const dragRotZ = useTransform(dx, [-220, 220], [-6, 6]);
+  const [touch, setTouch] = useState(false);
+  const [hint, setHint] = useState(true);
+  useEffect(() => { setTouch(window.matchMedia('(pointer: coarse)').matches); }, []);
 
   const onMove = (e: React.PointerEvent) => {
     if (reduce || e.pointerType !== 'mouse') return;
@@ -50,28 +58,46 @@ export default function Hero() {
           <a href="#cardapio" className="btn btn-gold">Explorar cardápio <span className="btn-dot"><ArrowRight /></span></a>
           <a href="#cafeteria" className="btn btn-ghost">Conheça nossa cafeteria</a>
         </motion.div>
+        <motion.aside className="hero-minis" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.15 }} aria-label="Destaques">
+          {mini.map((slug) => {
+            const p = productBySlug.get(slug)!;
+            const img = images[p.image!];
+            return (
+              <Link key={slug} to={`/cardapio/${slug}`} className="mini-card">
+                <img src={img.src} alt={img.alt} width="120" height="80" />
+                <span className="mini-text"><span className="mini-name">{p.name}</span><span className="mini-price">{brl(p.price)}</span></span>
+              </Link>
+            );
+          })}
+        </motion.aside>
       </motion.div>
 
       <motion.div className="hero-stage" style={{ y: reduce ? 0 : cupY, rotate: reduce ? 0 : cupRot }}>
         <motion.div className="hero-cup" style={{ rotateX: tiltX, rotateY: tiltY }}
           initial={{ opacity: 0, scale: 0.85, y: 60 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
-          <div className="hero-cup-float"><img className="hero-cup-img" src={images['ia-hero'].src} alt={images['ia-hero'].alt} width="1250" height="1000" fetchPriority="high" decoding="async" /></div>
+          <motion.div
+            className="hero-drag"
+            drag={reduce ? false : touch ? 'x' : true}
+            dragSnapToOrigin
+            dragElastic={0.55}
+            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+            dragTransition={{ bounceStiffness: 260, bounceDamping: 14 }}
+            whileTap={{ scale: 0.96 }}
+            whileHover={touch ? undefined : { scale: 1.03 }}
+            onDragStart={() => setHint(false)}
+            style={{ x: dx, y: dy, rotateY: dragRotY, rotateX: dragRotX, rotateZ: dragRotZ }}
+          >
+            <div className="hero-cup-float"><img className="hero-cup-img" src={images['ia-hero'].src} alt={images['ia-hero'].alt} width="1250" height="1000" fetchPriority="high" decoding="async" draggable={false} /></div>
+          </motion.div>
+          <AnimatePresence>
+            {hint && !reduce && (
+              <motion.span className="drag-hint" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8, transition: { delay: 0, duration: 0.3 } }} transition={{ delay: 1.8 }}>
+                <span className="drag-hint-dot" aria-hidden="true" />{touch ? 'Deslize para girar' : 'Arraste para girar'}
+              </motion.span>
+            )}
+          </AnimatePresence>
         </motion.div>
       </motion.div>
-
-      <motion.aside className="hero-minis" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.1 }} aria-label="Destaques">
-        {mini.map((slug) => {
-          const p = productBySlug.get(slug)!;
-          const img = images[p.image!];
-          return (
-            <Link key={slug} to={`/cardapio/${slug}`} className="mini-card">
-              <img src={img.src} alt={img.alt} width="120" height="80" />
-              <span className="mini-name">{p.name}</span>
-              <span className="mini-price">{brl(p.price)}</span>
-            </Link>
-          );
-        })}
-      </motion.aside>
 
       <motion.p className="hero-script" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.2, duration: 1 }}>
         Mais que um café,<br /><span>uma experiência.</span>
