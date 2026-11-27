@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const site = (process.argv[2] || process.env.SITE_URL || 'https://vinascafe.com.br').replace(/\/$/, '');
+const site = (process.argv[2] || process.env.SITE_URL || '').replace(/\/$/, '');
 const load = (f) => {
   const js = ts.transpileModule(readFileSync(join(root, f), 'utf8').replaceAll('${import.meta.env.BASE_URL}', '/'), { compilerOptions: { module: ts.ModuleKind.ES2022 } }).outputText;
   return import('data:text/javascript;base64,' + Buffer.from(js.replace(/^import .*$/gm, '')).toString('base64'));
@@ -47,4 +47,4 @@ for (const p of products) {
 const urls = ['/', ...products.map((p) => `/cardapio/${p.slug}`)];
 writeFileSync(join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site}${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${site}/sitemap.xml\n`);
-console.log(`prerender: ${products.length} páginas de produto + sitemap (${site})`);
+console.log(`prerender: ${products.length} páginas de produto + sitemap (${site || 'links relativos; defina SITE_URL'})`);
