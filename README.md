@@ -25,7 +25,7 @@ Passo a passo em `.claude/skills/atualizar-cardapio/SKILL.md`.
 
 ## Publicar
 
-**Cloudflare (recomendado, grátis):** o repositório já tem `wrangler.jsonc`. No painel: Workers & Pages → Create → Import a repository → `lucasmartinsadvc`, Build command `npm run build`, Deploy command `npx wrangler deploy`. Depois do primeiro deploy, adicione a variável de build `SITE_URL` com o endereço final (para sitemap e links canônicos absolutos) e publique de novo.
+**Cloudflare (recomendado, grátis):** o repositório já tem `wrangler.jsonc`. No painel: Workers & Pages → Create → Import a repository → `lucasmartinsadvc`, Build command `npm run build`, Deploy command `npx wrangler deploy`. O endereço padrão (`https://lucasmartinsadvc.davidemanueldelima09.workers.dev`) já está no `scripts/prerender.mjs`; ao usar um domínio próprio, defina a variável de build `SITE_URL`.
 
 O build é estático (pasta `dist/`). Defina o domínio para canonical/sitemap/OG:
 ```bash

@@ -23,7 +23,7 @@ export function useSeo(meta: { title: string; description: string; image?: strin
     if (meta.image) setMeta('meta[property="og:image"]', 'property', 'og:image', origin + meta.image);
     let link = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) { link = document.createElement('link'); link.rel = 'canonical'; document.head.appendChild(link); }
-    link.href = origin + meta.path;
+    link.href = origin + meta.path + (meta.path.endsWith('/') ? '' : '/');
     return () => {
       document.title = DEFAULT.title;
       setMeta('meta[name="description"]', 'name', 'description', DEFAULT.description);
