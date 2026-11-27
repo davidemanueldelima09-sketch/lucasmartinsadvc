@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
-import ProductVisual, { ImageBadge } from './ProductVisual';
+import ProductVisual from './ProductVisual';
 import Particles, { Steam } from './Particles';
 import { ArrowLeft, ArrowRight, Close, Bag, WhatsApp } from './Icons';
 import { brl, categoryOf, imageOf, orderedProducts, particlesFor, productBySlug, productIndex, seeded, whatsappLink } from '../lib/menu';
@@ -84,7 +84,6 @@ export default function ProductStage() {
   const cat = categoryOf(p);
   const sc = cat.scene;
   const related = orderedProducts.filter((o) => o.category === p.category && o.slug !== p.slug).slice(0, 8);
-  const img = imageOf(p);
   const showSteam = steamy.has(p.category) && (p.category !== 'bebidas-cremosas' || hotChocolate.test(p.name));
   const kinds = particlesFor(p);
 
@@ -168,8 +167,7 @@ export default function ProductStage() {
                   <a className="btn btn-ghost" href={business.aiqfome} target="_blank" rel="noopener"><Bag className="ico" /> Pedir no aiqfome</a>
                 </div>
                 <p className="stage-fine">
-                  Código {p.id} · <ImageBadge p={p} /> {img?.kind === 'ilustrativa' && <>· imagem meramente ilustrativa</>}
-                  <br />Preço conforme cardápio do aiqfome (nov/2026), sujeito a alteração.
+                  Código {p.id} · Preço conforme cardápio do aiqfome (nov/2026), sujeito a alteração.
                 </p>
                 {related.length > 0 && (
                   <nav className="stage-related-inline" aria-label={`Mais em ${cat.name} (lista)`}>

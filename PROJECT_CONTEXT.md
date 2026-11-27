@@ -31,7 +31,7 @@ public/img/oficial | public/img/ilustrativas
 - Paleta derivada da **logomarca oficial** (monograma "VC" em forma de xícara, dourado sobre verde): verde `#072F27`, verde profundo `#021712`, musgo `#56663A`, creme `#F4ECDC`, café `#3A2316`, dourado `#D6A86B`.
 - Tipografia: Fraunces (serifada editorial, itálico para acentos) + Manrope (texto/UI).
 - Assinatura: “Mais que um café, uma experiência.”
-- Hero: xícara em esmalte verde Viñas com borda e monograma dourados, latte art, vapor animado, grãos flutuantes com profundidade de campo e parallax por ponteiro/rolagem.
+- Hero: imagem fotorrealista dos copos Viñas (gerada por IA no ElevenLabs) com gotas de café animadas saindo do espirro (`CoffeeDrops`), flutuação suave, parallax por mouse/rolagem e entrada do título em máscara. O giro 360° foi removido a pedido do cliente.
 
 ## Apresentação individual dos produtos
 Cada produto tem URL própria (`/cardapio/<slug>`) e um “palco” cinematográfico. A composição combina:
@@ -53,7 +53,7 @@ Navegação: setas/teclado (←/→), swipe no celular, Esc fecha, lista “Mais
 
 ## Decisões importantes
 - Não inventar dados: textos sem fonte ficam como “Descrição detalhada em breve”; história de fundação não publicada → seção “Nossa história” baseada apenas no cardápio.
-- Imagens: selo visível “Foto oficial” / “Ilustrativa” / “Foto em breve”. Ilustrativas = Unsplash, só onde o produto corresponde.
+- Imagens: todos os 120 produtos têm foto. 5 oficiais (aiqfome), algumas do Unsplash e 93 geradas por IA (ElevenLabs + Figma, folhas 2×2 recortadas; prompts em `docs/prompts-cardapio.json`, arquivos em `public/img/cardapio/`). A pedido do cliente, o site não exibe selos de procedência; o registro fica em `src/data/images.ts`.
 - Itens `available: false` (marcados indisponíveis no aiqfome) aparecem com aviso e podem ser filtrados.
 - “Assinaturas Viñas” é seleção editorial (não ranking de vendas).
 - Nomes normalizados (capitalização, “Bolo …”, “Torta …”); descrições e preços literais da fonte.
@@ -61,7 +61,7 @@ Navegação: setas/teclado (←/→), swipe no celular, Esc fecha, lista “Mais
 ## Pendências (precisam do cliente)
 1. Confirmar se **(88) 9 2001-4742** (telefone do aiqfome) é o **WhatsApp oficial**.
 2. **Cafés quentes** (espresso, coado, cappuccino, latte…) **não constam no aiqfome** — enviar cardápio de balcão para incluir.
-3. Fotos oficiais de ~115 produtos (hoje 2 oficiais + ilustrativas/ilustrações).
+3. Substituir as fotos geradas por IA por fotos reais dos produtos quando houver sessão de fotos.
 4. Link do **iFood** (se existir) → `contact.ts > ifood`.
 5. História da marca (fundação, fundadores, conceito) e fotos do ambiente.
 6. Descrições/ingredientes de itens sem descrição na fonte (croissants simples, tapiocas, salgados, bolos, tortas…).

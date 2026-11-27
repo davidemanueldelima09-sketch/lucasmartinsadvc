@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         <p className="footer-fine">
           © {new Date().getFullYear()} {business.name} · CNPJ {business.cnpj} · {business.address.complement}, {business.address.city}–{business.address.state}.<br />
-          Preços e cardápio conforme aiqfome (nov/2026), sujeitos a alteração. Imagens marcadas como “ilustrativa” são provisórias (Unsplash) e não retratam produtos da casa.
+          Preços e cardápio conforme aiqfome (nov/2026), sujeitos a alteração.
         </p>
       </footer>
       <a className="wa-fab" href={whatsappLink()} target="_blank" rel="noopener" aria-label="Fazer pedido pelo WhatsApp">

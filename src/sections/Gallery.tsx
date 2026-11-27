@@ -9,7 +9,6 @@ export default function Gallery() {
       <div className="gallery-head">
         <Reveal as="p" className="eyebrow">Galeria</Reveal>
         <Reveal as="h2" className="display"><span id="gal-title">Momentos <em>Viñas</em></span></Reveal>
-        <Reveal as="p" className="lede">Fotos com selo “oficial” são do Viñas Café; as demais são ilustrativas e provisórias, até a sessão de fotos da casa.</Reveal>
       </div>
       <div className="gallery-grid">
         {galleryKeys.map((k, i) => {
@@ -17,7 +16,6 @@ export default function Gallery() {
           return (
             <Reveal key={k} delay={(i % 3) * 0.08} className={`g-item g-${i}`}>
               <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
-              <span className={`img-badge ${img.kind === 'oficial' ? 'is-official' : 'is-illus'}`}>{img.kind === 'oficial' ? 'Foto oficial' : 'Ilustrativa'}</span>
             </Reveal>
           );
         })}

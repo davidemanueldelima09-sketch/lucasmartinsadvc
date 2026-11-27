@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ProductVisual, { ImageBadge } from './ProductVisual';
+import ProductVisual from './ProductVisual';
 import { brl, categoryOf } from '../lib/menu';
 import type { Product } from '../data/types';
 import { ArrowRight } from './Icons';
@@ -14,7 +14,6 @@ export default function ProductCard({ p, index }: { p: Product; index: number })
         style={{ ['--bg1' as string]: cat.scene.bg[0], ['--bg2' as string]: cat.scene.bg[1], ['--a' as string]: cat.scene.accent }}>
         <div className="pcard-media">
           <ProductVisual p={p} />
-          <ImageBadge p={p} />
           {p.available === false && <span className="pcard-off">Indisponível no momento</span>}
         </div>
         <div className="pcard-body">

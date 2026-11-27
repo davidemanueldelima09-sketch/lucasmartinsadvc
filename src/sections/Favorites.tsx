@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ProductVisual, { ImageBadge } from '../components/ProductVisual';
+import ProductVisual from '../components/ProductVisual';
 import Reveal from '../components/Reveal';
 import { brl, categoryOf, productBySlug, signatureSlugs } from '../lib/menu';
 import { ArrowRight } from '../components/Icons';
@@ -26,7 +26,7 @@ export default function Favorites() {
             <li key={p.slug} className="fav" style={{ ['--bg1' as string]: c.scene.bg[0], ['--bg2' as string]: c.scene.bg[1], ['--a' as string]: c.scene.accent }}>
               <Link to={`/cardapio/${p.slug}`}>
                 <span className="fav-n">{String(i + 1).padStart(2, '0')}</span>
-                <div className="fav-media"><ProductVisual p={p} /><ImageBadge p={p} /></div>
+                <div className="fav-media"><ProductVisual p={p} /></div>
                 <div className="fav-body">
                   <small>{c.name}</small>
                   <h3>{p.name}</h3>
