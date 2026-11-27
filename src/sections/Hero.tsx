@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, type MotionValue, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import HeroCup from '../components/HeroCup';
-import { Bean, Steam } from '../components/Particles';
+import { Bean } from '../components/Particles';
 import { ArrowRight, Plus } from '../components/Icons';
 import { productBySlug, brl } from '../lib/menu';
 import { images } from '../data/images';
@@ -63,7 +63,6 @@ export default function Hero() {
       <motion.div className="hero-stage" style={{ y: reduce ? 0 : cupY, rotate: reduce ? 0 : cupRot }}>
         <motion.div className="hero-cup" style={{ rotateX: tiltX, rotateY: tiltY }}
           initial={{ opacity: 0, scale: 0.85, y: 60 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
-          <Steam className="hero-steam" strands={4} />
           <div className="hero-cup-float"><HeroCup /></div>
         </motion.div>
         {beans.map((b, i) => (
