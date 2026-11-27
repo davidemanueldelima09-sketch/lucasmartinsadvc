@@ -1,3 +1,4 @@
+import { images } from '../data/images';
 import { business } from '../data/contact';
 import { whatsappLink } from '../lib/menu';
 import { WhatsApp } from '../components/Icons';
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="footer-big" aria-hidden="true">Viñas Café</div>
         <div className="footer-grid">
           <div>
-            <img src="/img/oficial/logo.webp" alt="Viñas Café" width="64" height="64" loading="lazy" />
+            <img src={images['of-logo'].src} alt="Viñas Café" width="64" height="64" loading="lazy" />
             <p className="footer-tag">{business.tagline}</p>
           </div>
           <nav aria-label="Rodapé">

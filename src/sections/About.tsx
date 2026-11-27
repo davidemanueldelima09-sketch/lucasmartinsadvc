@@ -5,6 +5,7 @@ import { Star } from '../components/Icons';
 import { products } from '../data/products';
 import { categories } from '../data/categories';
 import { business } from '../data/contact';
+import { images } from '../data/images';
 
 /** A cafeteria — dados verificáveis (aiqfome) + texto de marca. */
 export default function About() {
@@ -20,7 +21,7 @@ export default function About() {
   return (
     <section id="cafeteria" className="about" ref={ref}>
       <div className="about-media">
-        <motion.img style={{ y: imgY }} src="/img/oficial/capa.webp" alt="Croissant com morangos e chocolate sendo finalizado — foto oficial do Viñas Café" loading="lazy" width="906" height="770" />
+        <motion.img style={{ y: imgY }} src={images['of-capa'].src} alt="Croissant com morangos e chocolate sendo finalizado — foto oficial do Viñas Café" loading="lazy" width="906" height="770" />
         <span className="img-badge is-official">Foto oficial</span>
       </div>
       <div className="about-copy">

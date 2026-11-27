@@ -34,7 +34,9 @@ export default function Visit() {
         </Reveal>
       </div>
       <div className="visit-map" ref={mapRef}>
-        {showMap ? (
+        {import.meta.env.MODE === 'artifact' ? (
+          <a className="map-ph" href={mapsUrl} target="_blank" rel="noopener">Abrir no Google Maps →</a>
+        ) : showMap ? (
           <iframe title="Mapa: Viñas Café no Sobral Shopping" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             src={`https://www.google.com/maps?q=${business.geo.lat},${business.geo.lng}&z=16&output=embed`} />
         ) : <div className="map-ph">Carregando mapa…</div>}

@@ -6,8 +6,8 @@ import type { ImageAsset } from './types';
  * 2) altere `src` e mude `kind` para 'oficial'.
  * Fotos "ilustrativa" vêm do Unsplash (licença Unsplash) e NÃO são do Viñas Café.
  */
-const of = (file: string, alt: string): ImageAsset => ({ src: `/img/oficial/${file}`, alt, kind: 'oficial', credit: 'Viñas Café (via aiqfome)' });
-const il = (file: string, alt: string): ImageAsset => ({ src: `/img/ilustrativas/${file}`, alt, kind: 'ilustrativa', credit: 'Unsplash — imagem ilustrativa provisória' });
+const of = (file: string, alt: string): ImageAsset => ({ src: `${import.meta.env.BASE_URL}img/oficial/${file}`, alt, kind: 'oficial', credit: 'Viñas Café (via aiqfome)' });
+const il = (file: string, alt: string): ImageAsset => ({ src: `${import.meta.env.BASE_URL}img/ilustrativas/${file}`, alt, kind: 'ilustrativa', credit: 'Unsplash — imagem ilustrativa provisória' });
 
 export const images: Record<string, ImageAsset> = {
   'of-logo': of('logo.webp', 'Logomarca Viñas Café'),

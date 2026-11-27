@@ -1,3 +1,4 @@
+import { images } from '../data/images';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Close, Menu as MenuIcon } from '../components/Icons';
@@ -24,7 +25,7 @@ export default function Nav() {
   return (
     <header className={`nav ${solid ? 'is-solid' : ''}`}>
       <a href="#inicio" className="nav-brand" aria-label="Viñas Café — início">
-        <img src="/img/oficial/logo.webp" alt="" width="36" height="36" />
+        <img src={images['of-logo'].src} alt="" width="36" height="36" />
         <span>Viñas <em>Café</em></span>
       </a>
       <nav className="nav-pill" aria-label="Principal">
