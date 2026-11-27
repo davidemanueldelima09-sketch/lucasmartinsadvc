@@ -7,28 +7,27 @@ export default function Footer() {
   return (
     <>
       <footer className="footer">
-        <div className="footer-big" aria-hidden="true">Viñas Café</div>
-        <div className="footer-grid">
-          <div>
-            <img src={images['of-logo'].src} alt="Viñas Café" width="64" height="64" loading="lazy" />
-            <p className="footer-tag">{business.tagline}</p>
+        <div className="wrap footer-grid">
+          <div className="footer-brand">
+            <img src={images['of-logo'].src} alt="" width="48" height="48" loading="lazy" />
+            <div><strong>Viñas Café</strong><p>{business.tagline}</p></div>
           </div>
           <nav aria-label="Rodapé">
-            <a href="#cardapio">Cardápio</a><a href="#historia">Nossa história</a><a href="#galeria">Galeria</a><a href="#visite">Localização</a>
+            <a href="#cardapio">Cardápio</a><a href="#cafeteria">A cafeteria</a><a href="#galeria">Galeria</a><a href="#visite">Como chegar</a>
           </nav>
-          <div>
+          <div className="footer-contact">
             <a href={business.instagram} target="_blank" rel="noopener">Instagram {business.instagramHandle}</a>
-            <a href={business.aiqfome} target="_blank" rel="noopener">Delivery aiqfome</a>
+            <a href={business.aiqfome} target="_blank" rel="noopener">Delivery no aiqfome</a>
             <a href={whatsappLink()} target="_blank" rel="noopener">WhatsApp {business.phoneDisplay}</a>
           </div>
         </div>
-        <p className="footer-fine">
-          © {new Date().getFullYear()} {business.name} · CNPJ {business.cnpj} · {business.address.complement}, {business.address.city}–{business.address.state}.<br />
-          Preços e cardápio conforme aiqfome (nov/2026), sujeitos a alteração. Imagens marcadas como “ilustrativa” são provisórias (Unsplash) e não retratam produtos da casa.
+        <p className="wrap footer-fine">
+          © {new Date().getFullYear()} {business.name}. CNPJ {business.cnpj}. {business.address.complement}, {business.address.city}–{business.address.state}.
+          Preços conforme o cardápio do aiqfome (nov/2026), sujeitos a alteração. Imagens marcadas como ilustrativas são provisórias e não retratam produtos da casa.
         </p>
       </footer>
       <a className="wa-fab" href={whatsappLink()} target="_blank" rel="noopener" aria-label="Fazer pedido pelo WhatsApp">
-        <WhatsApp /><span>Pedir agora</span>
+        <WhatsApp />
       </a>
     </>
   );

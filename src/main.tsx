@@ -1,9 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
-import '@fontsource-variable/fraunces/opsz.css';
-import '@fontsource-variable/fraunces/opsz-italic.css';
-import '@fontsource-variable/manrope/index.css';
+import '@fontsource/dm-serif-display/400.css';
+import '@fontsource-variable/figtree/index.css';
 import './index.css';
 import App from './App';
 

@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
-import ProductVisual, { ImageBadge } from './ProductVisual';
-import Particles, { Steam } from './Particles';
-import { ArrowLeft, ArrowRight, Close, Bag, WhatsApp } from './Icons';
-import { brl, categoryOf, imageOf, orderedProducts, particlesFor, productBySlug, productIndex, seeded, whatsappLink } from '../lib/menu';
+import ProductVisual from './ProductVisual';
+import { Steam } from './Steam';
+import { ArrowLeft, ArrowRight, Close } from './Icons';
+import { brl, categoryOf, imageOf, orderedProducts, productBySlug, productIndex, seeded, whatsappLink } from '../lib/menu';
 import { business } from '../data/contact';
 import { useSeo } from '../lib/useSeo';
 
@@ -45,7 +45,7 @@ export default function ProductStage() {
   useEffect(() => {
     const html = document.documentElement;
     html.classList.add('stage-open');
-    closeRef.current?.focus({ preventScroll: true });
+    closeRef.current?.focus({ preventScroll: true, focusVisible: false } as FocusOptions);
     return () => html.classList.remove('stage-open');
   }, []);
 
@@ -63,7 +63,7 @@ export default function ProductStage() {
   const mx = useMotionValue(0), my = useMotionValue(0);
   const sx = useSpring(mx, { stiffness: 70, damping: 20 }), sy = useSpring(my, { stiffness: 70, damping: 20 });
   const rY = useTransform(sx, (v) => v * 14), rX = useTransform(sy, (v) => v * -10);
-  const pX = useTransform(sx, (v) => v * -30), pY = useTransform(sy, (v) => v * -20);
+  const pY = useTransform(sy, (v) => v * -20);
   const fX = useTransform(sx, (v) => v * 10);
 
   const variant = useMemo(() => {
@@ -76,7 +76,7 @@ export default function ProductStage() {
     return (
       <div className="stage stage-missing" role="dialog" aria-modal="true" aria-label="Produto não encontrado">
         <p>Produto não encontrado.</p>
-        <Link className="btn btn-gold" to="/">Voltar ao cardápio</Link>
+        <Link className="btn btn-primary" to="/">Voltar ao cardápio</Link>
       </div>
     );
   }
@@ -86,7 +86,6 @@ export default function ProductStage() {
   const related = orderedProducts.filter((o) => o.category === p.category && o.slug !== p.slug).slice(0, 8);
   const img = imageOf(p);
   const showSteam = steamy.has(p.category) && (p.category !== 'bebidas-cremosas' || hotChocolate.test(p.name));
-  const kinds = particlesFor(p);
 
   const onMove = (e: React.PointerEvent) => {
     if (reduce || e.pointerType !== 'mouse') return;
@@ -115,22 +114,12 @@ export default function ProductStage() {
           }}
           initial="enter" animate="center" exit="exit" transition={{ duration: 0.6, ease: [0.2, 0.7, 0.2, 1] }}>
 
-          <motion.div className="stage-ghost" aria-hidden="true" style={{ x: pX, rotate: variant.ghostRot }}>
-            <span>{p.name}</span><span>{p.name}</span>
-          </motion.div>
 
-          <Particles kinds={kinds} seed={p.id} count={reduce ? 8 : 18} className="stage-particles" />
 
           <div className="stage-grid">
             <motion.div className="stage-visual" style={{ rotateX: rX, rotateY: rY }}
               drag={reduce ? false : 'x'} dragConstraints={{ left: 0, right: 0 }} dragElastic={0.25}
               onDragEnd={(_, i) => { if (i.offset.x < -70) go(next.slug, 1); else if (i.offset.x > 70) go(prev.slug, -1); }}>
-              {sc.layout === 'orbit' && (
-                <svg className="stage-ring" viewBox="0 0 200 200" aria-hidden="true" style={{ rotate: `${variant.ring}deg` }}>
-                  <defs><path id={`ring-${p.id}`} d="M100 100m-86 0a86 86 0 1 1 172 0a86 86 0 1 1-172 0" /></defs>
-                  <text><textPath href={`#ring-${p.id}`}>{`VIÑAS CAFÉ • ${cat.name.toUpperCase()} • ${p.name.toUpperCase()} • `.repeat(2)}</textPath></text>
-                </svg>
-              )}
               {sc.layout === 'stack' && <><span className="stack-l stack-l1" /><span className="stack-l stack-l2" /></>}
               <motion.div className="stage-frame" style={{ x: fX, y: pY }}
                 initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
@@ -143,9 +132,8 @@ export default function ProductStage() {
             <div className="stage-info">
               <motion.div className="stage-meta" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                 <span className="stage-chip">{cat.name}</span>
-                <span className="stage-count">{String(idx + 1).padStart(3, '0')} / {total}</span>
+                <span className="stage-count">{idx + 1} de {total}</span>
               </motion.div>
-              <motion.p className="stage-mood" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>{sc.mood}</motion.p>
               <motion.h2 id="stage-title" className="stage-title" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
                 {p.name}
               </motion.h2>
@@ -153,23 +141,17 @@ export default function ProductStage() {
                 {p.description
                   ? <p className="stage-desc">{p.description}</p>
                   : <p className="stage-desc is-muted">Descrição detalhada em breve. Consulte a equipe pelo WhatsApp para saber mais.</p>}
-                {p.ingredients.length > 1 && (
-                  <ul className="stage-ings" aria-label="Ingredientes">
-                    {p.ingredients.map((i) => <li key={i}>{i}</li>)}
-                  </ul>
-                )}
                 <div className="stage-price">
                   <strong>{brl(p.price)}</strong>
                   {p.size && <span>{p.size}</span>}
                   {p.available === false && <em className="stage-off">Indisponível no momento</em>}
                 </div>
                 <div className="stage-ctas">
-                  <a className="btn btn-gold" href={whatsappLink(p)} target="_blank" rel="noopener"><WhatsApp className="ico" /> Pedir pelo WhatsApp</a>
-                  <a className="btn btn-ghost" href={business.aiqfome} target="_blank" rel="noopener"><Bag className="ico" /> Pedir no aiqfome</a>
+                  <a className="btn btn-primary" href={whatsappLink(p)} target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+                  <a className="btn btn-line" href={business.aiqfome} target="_blank" rel="noopener">Pedir no aiqfome</a>
                 </div>
                 <p className="stage-fine">
-                  Código {p.id} · <ImageBadge p={p} /> {img?.kind === 'ilustrativa' && <>· imagem meramente ilustrativa</>}
-                  <br />Preço conforme cardápio do aiqfome (nov/2026), sujeito a alteração.
+                  Código {p.id}. {img ? (img.kind === 'oficial' ? 'Foto do Viñas Café.' : 'Imagem ilustrativa.') : 'Foto em breve.'} Preço conforme o aiqfome (nov/2026), sujeito a alteração.
                 </p>
                 {related.length > 0 && (
                   <nav className="stage-related-inline" aria-label={`Mais em ${cat.name} (lista)`}>
