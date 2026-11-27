@@ -19,6 +19,7 @@ export const images: Record<string, ImageAsset> = {
   'of-croissant-nutella': of('croissant-nutella-morango.webp', 'Croissant Nutella com morango do Viñas Café'),
   'of-combo-coxinha': of('combo-coxinha-brigadeiro.webp', 'Combo coxinha de frango com requeijão e brigadeiro gourmet'),
 
+  'ia-hero-drops': { src: `${import.meta.env.BASE_URL}img/hero/gotas.webp`, alt: '', kind: 'ilustrativa', credit: 'Gotas recortadas da imagem do hero' },
   'of-guarana-lata': of('guarana-antarctica-lata.webp', 'Lata de Guaraná Antarctica'),
   'm-croissant-peito-de-peru-c-cream-cheese': ia('croissant-peito-de-peru-c-cream-cheese.webp'),
   'm-croissant-frango-c-requeijao': ia('croissant-frango-c-requeijao.webp'),

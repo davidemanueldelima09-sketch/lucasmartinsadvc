@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, Plus } from '../components/Icons';
-import CoffeeDrops from '../components/CoffeeDrops';
+import HeroDrops from '../components/HeroDrops';
 import { productBySlug, brl } from '../lib/menu';
 import { images } from '../data/images';
 
@@ -71,7 +71,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92, y: 40 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1.6, ease }}>
           <div className="hero-cup-float">
             <img className="hero-cup-img" src={images['ia-hero'].src} alt={images['ia-hero'].alt} width="1250" height="1000" fetchPriority="high" decoding="async" />
-            {!reduce && <CoffeeDrops />}
+            <HeroDrops src={images['ia-hero-drops'].src} />
           </div>
         </motion.div>
       </motion.div>

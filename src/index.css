@@ -139,21 +139,24 @@ body::after {
 
 .hero-stage { position: relative; z-index: 3; min-height: 360px; display: grid; place-items: center; perspective: 1200px; }
 .hero-cup { position: relative; width: min(92vw, 620px); transform-style: preserve-3d; }
-.hero-cup-float { position: relative; animation: bob 8s ease-in-out infinite; }
+.hero-cup-float { position: relative; animation: bob 8s ease-in-out infinite;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 11%, #000 74%, transparent 98%), linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 11%, #000 74%, transparent 98%), linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  -webkit-mask-composite: source-in; mask-composite: intersect; }
 @keyframes bob { 50% { transform: translateY(-12px); } }
-/* gotas de café saindo do espirro */
-.coffee-drops { position: absolute; inset: 0; pointer-events: none; }
-.cdrop { position: absolute; border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%; background: radial-gradient(circle at 35% 30%, #ffe0a8 0 12%, #d0812f 30%, #6b330e 75%, #2e1404); box-shadow: 0 0 8px rgba(240,170,90,.35); opacity: 0; animation: cdrop var(--dur) cubic-bezier(.3,.6,.5,1) var(--delay) infinite; will-change: transform, opacity; }
-@keyframes cdrop {
-  0%   { transform: translate(0, 0) scale(.4); opacity: 0; }
-  8%   { opacity: 1; }
-  25%  { transform: translate(calc(var(--dx) * .25), calc(var(--h) * -.75)) scale(1); }
-  45%  { transform: translate(calc(var(--dx) * .45), calc(var(--h) * -1)) scale(1); }
-  70%  { transform: translate(calc(var(--dx) * .7), calc(var(--h) * -.45)) scale(.95); opacity: 1; }
-  100% { transform: translate(var(--dx), var(--fall)) scale(.7); opacity: 0; }
+/* gotas reais da foto saindo do espirro */
+.hero-drops { position: absolute; inset: 0; pointer-events: none; container-type: inline-size; }
+.hdrop { position: absolute; background-repeat: no-repeat; opacity: 0; will-change: transform, opacity;
+  animation: hdrop var(--dur) cubic-bezier(.25,.6,.35,1) var(--delay) infinite; }
+@keyframes hdrop {
+  0%   { transform: translate(calc(var(--dx) * -.6cqw), calc(var(--dy) * -.6cqw)) scale(.45); opacity: 0; }
+  14%  { opacity: 1; }
+  62%  { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(calc(var(--dx) * .22cqw), calc(var(--dy) * .22cqw + 2.4cqw)) scale(.85); opacity: 0; }
 }
+@media (prefers-reduced-motion: reduce) { .hdrop { animation: none !important; opacity: 1; } }
+
 .hero-cup-svg { width: 100%; height: auto; }
-.hero-cup-img { width: 100%; height: auto; -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 48%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at 50% 48%, #000 58%, transparent 100%); }
+.hero-cup-img { width: 100%; height: auto; display: block; }
 .hero-bean { position: absolute; pointer-events: none; }
 .bean-bob { animation: beanfloat var(--dur, 7s) ease-in-out infinite; transform: rotate(var(--r)); }
 @keyframes beanfloat { 50% { transform: rotate(calc(var(--r) + 25deg)) translateY(-18px); } }
