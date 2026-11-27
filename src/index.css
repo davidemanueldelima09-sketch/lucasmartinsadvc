@@ -137,11 +137,15 @@ body::after {
 
 .hero-stage { position: relative; z-index: 3; min-height: 360px; display: grid; place-items: center; perspective: 1200px; }
 .hero-cup { position: relative; width: min(92vw, 620px); transform-style: preserve-3d; }
-.hero-cup-float { animation: bob 7s ease-in-out infinite; }
+.hero-cup-float { animation: bob 7s ease-in-out infinite; transform-style: preserve-3d; }
 .hero-drag { cursor: grab; touch-action: pan-y; transform-style: preserve-3d; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.spin-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.spin-back { position: absolute; inset: 0; transform: rotateY(180deg); }
 .hero-drag:active { cursor: grabbing; }
 .hero-drag img { pointer-events: none; }
-.drag-hint { position: absolute; left: 50%; top: 2%; translate: -50% 0; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 99px; font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--cream); background: rgba(2,23,18,.55); border: 1px solid rgba(214,168,107,.35); backdrop-filter: blur(8px); pointer-events: none; white-space: nowrap; z-index: 7; }
+.drag-hint { position: absolute; left: 50%; top: 2%; translate: -50% 0; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 99px; font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--cream); background: rgba(2,23,18,.55); border: 1px solid rgba(214,168,107,.35); backdrop-filter: blur(8px); white-space: nowrap; z-index: 7; cursor: pointer; transition: background .3s, border-color .3s; }
+.drag-hint:hover { background: rgba(2,23,18,.8); border-color: var(--gold); }
+.drag-hint.is-used .drag-hint-dot { animation: none; }
 .drag-hint-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); animation: hintdot 1.6s ease-in-out infinite; }
 @keyframes hintdot { 0%, 100% { transform: translateX(-5px); } 50% { transform: translateX(5px); } }
 .hero-cup-svg { width: 100%; height: auto; }
@@ -522,6 +526,7 @@ html.stage-open .wa-fab { display: none; }
   .hero-ctas { justify-content: center; }
   .hero-ctas .btn { flex: 1 1 240px; justify-content: center; }
   .hero-minis { margin-inline: auto; text-align: left; }
+  .drag-hint { top: auto; bottom: 30px; }
   .hero-script { text-align: center; margin-top: 34px; }
 }
 @media (min-width: 980px) { .stage-related-inline { display: none; } }

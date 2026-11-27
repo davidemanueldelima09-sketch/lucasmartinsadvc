@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { animate, motion, type PanInfo, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, Plus } from '../components/Icons';
 import { productBySlug, brl } from '../lib/menu';
 import { images } from '../data/images';
@@ -19,14 +19,22 @@ export default function Hero() {
   const ghostX = useTransform(scrollYProgress, [0, 1], ['0%', '-18%']);
   const tiltX = useTransform(sy, (v) => v * -6), tiltY = useTransform(sx, (v) => v * 8);
 
-  // arrastar os copos (mouse e toque): gira em 3D e volta com mola ao soltar
-  const dx = useMotionValue(0), dy = useMotionValue(0);
-  const dragRotY = useTransform(dx, [-220, 220], [-28, 28]);
-  const dragRotX = useTransform(dy, [-220, 220], [20, -20]);
-  const dragRotZ = useTransform(dx, [-220, 220], [-6, 6]);
-  const [touch, setTouch] = useState(false);
-  const [hint, setHint] = useState(true);
-  useEffect(() => { setTouch(window.matchMedia('(pointer: coarse)').matches); }, []);
+  // giro 360°: arrastar (mouse ou dedo) gira os copos em torno do eixo vertical,
+  // com inércia; ao parar, assenta de frente (múltiplo de 360°).
+  const spin = useMotionValue(0), lean = useMotionValue(0);
+  const [used, setUsed] = useState(false);
+  const settle = (velocity = 0) => {
+    const target = Math.round((spin.get() + velocity * 0.35) / 360) * 360;
+    animate(spin, target, { type: 'spring', velocity, stiffness: 40, damping: 14 });
+    animate(lean, 0, { type: 'spring', stiffness: 120, damping: 12 });
+  };
+  const onPan = (_: PointerEvent, i: PanInfo) => {
+    spin.set(spin.get() + i.delta.x * 0.7);
+    lean.set(Math.max(-14, Math.min(14, lean.get() - i.delta.y * 0.15)));
+  };
+  const onPanStart = () => { setUsed(true); spin.stop(); };
+  const onPanEnd = (_: PointerEvent, i: PanInfo) => settle(i.velocity.x * 0.7);
+  const spinOnce = () => { setUsed(true); animate(spin, Math.round(spin.get() / 360) * 360 + 360, { duration: 1.6, ease: [0.45, 0, 0.2, 1] }); };
 
   const onMove = (e: React.PointerEvent) => {
     if (reduce || e.pointerType !== 'mouse') return;
@@ -75,28 +83,29 @@ export default function Hero() {
       <motion.div className="hero-stage" style={{ y: reduce ? 0 : cupY, rotate: reduce ? 0 : cupRot }}>
         <motion.div className="hero-cup" style={{ rotateX: tiltX, rotateY: tiltY }}
           initial={{ opacity: 0, scale: 0.85, y: 60 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
+          <div className="hero-cup-float">
           <motion.div
             className="hero-drag"
-            drag={reduce ? false : touch ? 'x' : true}
-            dragSnapToOrigin
-            dragElastic={0.55}
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-            dragTransition={{ bounceStiffness: 260, bounceDamping: 14 }}
-            whileTap={{ scale: 0.96 }}
-            whileHover={touch ? undefined : { scale: 1.03 }}
-            onDragStart={() => setHint(false)}
-            style={{ x: dx, y: dy, rotateY: dragRotY, rotateX: dragRotX, rotateZ: dragRotZ }}
+            onPan={reduce ? undefined : onPan}
+            onPanStart={reduce ? undefined : onPanStart}
+            onPanEnd={reduce ? undefined : onPanEnd}
+            whileTap={{ scale: 0.97 }}
+            style={{ rotateY: spin, rotateX: lean }}
           >
-            <div className="hero-cup-float"><img className="hero-cup-img" src={images['ia-hero'].src} alt={images['ia-hero'].alt} width="1250" height="1000" fetchPriority="high" decoding="async" draggable={false} /></div>
+            <div className="spin-face">
+              <img className="hero-cup-img" src={images['ia-hero'].src} alt={images['ia-hero'].alt} width="1250" height="1000" fetchPriority="high" decoding="async" draggable={false} />
+            </div>
+            <div className="spin-face spin-back" aria-hidden="true">
+              <img className="hero-cup-img" src={images['ia-hero'].src} alt="" width="1250" height="1000" decoding="async" draggable={false} />
+            </div>
           </motion.div>
-          <AnimatePresence>
-            {hint && !reduce && (
-              <motion.span className="drag-hint" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8, transition: { delay: 0, duration: 0.3 } }} transition={{ delay: 1.8 }}>
-                <span className="drag-hint-dot" aria-hidden="true" />{touch ? 'Deslize para girar' : 'Arraste para girar'}
-              </motion.span>
-            )}
-          </AnimatePresence>
+          </div>
         </motion.div>
+        {!reduce && (
+          <button type="button" className={`drag-hint ${used ? 'is-used' : ''}`} onClick={spinOnce} aria-label="Girar os copos 360 graus">
+            <span className="drag-hint-dot" aria-hidden="true" />{used ? 'Girar 360°' : 'Arraste para girar 360°'}
+          </button>
+        )}
       </motion.div>
 
       <motion.p className="hero-script" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.2, duration: 1 }}>
