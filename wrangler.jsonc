@@ -1,6 +1,6 @@
 // Cloudflare Workers (static assets): publica a pasta dist gerada por `npm run build`.
 {
-  "name": "lucasmartinsadvc",
+  "name": "vinascafe",
   "compatibility_date": "2025-06-01",
   "assets": {
     "directory": "./dist",
